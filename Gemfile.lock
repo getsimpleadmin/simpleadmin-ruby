@@ -1,0 +1,56 @@
+PATH
+  remote: .
+  specs:
+    simpleadmin (1.0.0)
+      bcrypt
+      rack-app
+      sequel
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bcrypt (3.1.13)
+    codecov (0.1.14)
+      json
+      simplecov
+      url
+    diff-lcs (1.3)
+    docile (1.3.1)
+    json (2.2.0)
+    rack (2.0.7)
+    rack-app (7.5.2)
+      rack
+    rake (10.5.0)
+    rspec (3.8.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
+    sequel (5.22.0)
+    simplecov (0.16.1)
+      docile (~> 1.1)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
+    url (0.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  codecov
+  rake (~> 10.0)
+  rspec
+  simpleadmin!
+
+BUNDLED WITH
+   1.17.2
