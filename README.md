@@ -5,7 +5,7 @@ SimpleAdmin provides builder for administrative dashboards, it's fit for Web / M
 
 All common admin dashboard tasks like content create / update / delete operations, charts, invite colleagues.
 
-This is API Rack Application to connect your application with SimpleAdmin service.
+This is API [Rack Application](https://rack.github.io/) to connect your application with SimpleAdmin service.
 
 [Example Application][demo]
 
@@ -29,7 +29,20 @@ And then run:
 bundle install
 ```
 
-## Configuration
+## Configuration in Ruby on Rails
+
+Just run next command:
+```ruby
+rails generate simpleadmin:install
+```
+
+It will automatically add initializer and SimpleAdmin API routes. Default secret key for your application:
+```ruby
+SECRET_KEY
+```
+**Don't forget to change it in production**
+
+## Configuration in Hanami, Sinatra and etc.
 
 Add the next line to your routes file to mount simpleadmin built-in routes:
 

@@ -27,14 +27,12 @@ module Simpleadmin
         per_page = per_page.to_i
         page = page.to_i
 
-        table_fields_names = table_fields.map { |field| field['field_name'].to_sym }
-
         total = client.from(table_name).count
         resources = client.from(table_name).limit(per_page)
 
         resources, total = *search(query, table_name, model_attributes) unless query.nil? || query.empty?
 
-        resources = resources.offset((per_page * page) - per_page).select(*table_fields_names)
+        resources = resources.offset((per_page * page) - per_page).select(*table_field_names(table_fields))
 
         if order_asc?(sort['order'])
           resources = resources.order(Sequel.asc(sort['column_name'].to_sym))
@@ -49,7 +47,9 @@ module Simpleadmin
       end
 
       def resource(resource_id, table_name, table_fields)
-        client.from(table_name).first(id: resource_id).slice(*table_fields.map(&:to_sym)).to_json
+        resource = client.from(table_name).first(id: resource_id).slice(*table_field_names(table_fields))
+
+        Decorators::FieldsDecorator.call([resource], table_name, table_fields).first.to_json
       end
 
       def create_resource(table_name, resource_params)

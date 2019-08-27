@@ -41,6 +41,10 @@ module Simpleadmin
         name.classify.safe_constantize
       end
 
+      def table_field_names(table_fields)
+        table_fields.map { |field| field['field_name'].to_sym }
+      end
+
       def table_names
         return client.tables if Config.allowed_tables.include?(:all)
 

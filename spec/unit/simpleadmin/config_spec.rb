@@ -7,7 +7,7 @@ RSpec.describe Simpleadmin::Config do
     subject { described_class.allowed_tables }
 
     context 'when allowed_tables is not defined' do
-      it { expect(subject).to eq [] }
+      it { expect(subject).to eq [:all] }
     end
   end
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simpleadmin (1.0.0)
+    simpleadmin (1.5.0)
       bcrypt
       rack-app
       sequel
