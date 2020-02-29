@@ -20,7 +20,7 @@ GEM
     rack (2.0.7)
     rack-app (7.5.2)
       rack
-    rake (10.5.0)
+    rake (13.0.1)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -48,7 +48,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.16)
   codecov
-  rake (~> 10.0)
+  rake (~> 13.0)
   rspec
   simpleadmin!
 
